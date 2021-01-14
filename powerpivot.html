@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso Power Pivot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+</head>
+
+<style>
+    *{font-family: 'Roboto Mono', monospace;}
+    h1, h4{color: #6F4BF2;}
+    body{display:flex; flex-direction: column; justify-content: center; align-items: center;}
+    header, section{width: 90%;}
+</style>
+
+<body>
+    <header>
+        <h1>Curso Power Pivot</h1>
+    </header>
+    <section class="sct1">
+        <h4>INTRODUCCIÓN</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/h_tdIBKij0k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h4>Motor Analítico de Modelo Tabular Power BI</h4>
+        <ul>
+            <li>Crean expresiones que van más allá de los límites.</li>
+            <li>Filtros agregados</li>
+            <li>Opciones de inteligencia de tiempo</li>
+            <li>Funciones que ayudan a tablas de memoria</li>
+        </ul>
+        <h4>Tipos de datos</h4>
+        <p>Numeros, Monedas, Cadenas, Fechas, Booleano, Blanco, Tabla</p>
+        <h4>Conversiones</h4>
+        <p>Conversión Implicita, Conversión Explicita</p>
+        <h4>Operadores</h4>
+        <ul>
+            <li>Matemáticos, Lógicos, de Cadena</li>
+            <li>In, Not, And y Or</li>
+        </ul>
+        
+        <h4>MODELO TABULAR</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/5Sz74nJ1ZuM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <ul>
+            <li>Está creado por tablas y componentes.</li>
+            <li>Se tiene que relacionar.</li>
+        </ul>
+        
+        <h4>CREACIÓN DE TABLAS DINÁMICAS MULTIFUENTES</h4>
+
+        <p>La creación de relaciones entre tablas únicamente se puede realizar cuando se tienen tablas dinámicas en excel, no se pueden realizar con hojas comunes.</p>
+        
+        <h4>SINTÁXIS DAX | DATA ANALÍSIS EXPRESSIONS</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/OHR12gjE7Ys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Calcular un valor más IVA de un tabla:</p>
+        <p>PRECIO+IVA:=VENTAS[Total]*1.16</p>
+        <img src="img/dax1.jpg" alt="" width="460">
+        <p>En DAX se deben usar las fórmulas de Excel en el idioma inglés. Ejemplo:</p>
+        <img src="img/dax2.jpg" alt="" width="460">
+        <p>Calcular total de ventas de la tabla VENTAS:</p>    
+        <img src="img/dax3.jpg" alt="" width="460">
+        <p>Calcular precio más bajo de un rango de la tabla PRODUCTOS:</p>
+        <img src="img/dax4.jpg" alt="" width="460">
+        <p>Calcular preico más alto de un rango de la tabla PRODUCTOS:</p>
+        <img src="img/dax5.jpg" alt="" width="460">
+        
+        <h4>OPERADOS LÓGICOS EN POWER PIVOT</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/Lt95M3FxlYw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Las evaluaciones en Power Pivot se realizan a través de los operadores IF, AND y OR.</p>
+        <ul>
+            <li>IF es una estructura de control que sirve para evaluar sentencias lógicas. Solamente
+            devuelve valores Booleanos, True y False.
+            </li>
+            <li>AND únicamente devuelve True si todas las sentencias son verdaderas | TRUE.</li>
+            <li>OR únicamente devuelte False si al menos una de las sentencias es falsa | FALSE.</li>
+        </ul>
+        <p>Calcular Ventas Altas, si el valor de la venta total es mayor a 100 y en caso contrario
+        mostrar Ventas Bajas:</p>
+        <img src="img/dax6.jpg" alt="" width="460">
+        <p>Calcular dos sentencias con AND.</p>
+        <ol>
+            <li>Total de ventas mayor que 100.</li>
+            <li>ID producto es 310</li>
+        </ol>
+        <img src="img/dax8.jpg" alt="" width="460">
+        <p>Calcular dos sentencias con OR.</p>
+        <ol>
+            <li>Total de ventas mayor que 200.</li>
+            <li>Cantidad mayor a 3.</li>
+        </ol>
+        <img src="img/dax9.jpg" alt="" width="460">
+        
+        <h4>SWITCH</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/nYrqbiUeAFU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Crear columna calculada con cuatro criterios que otorgue los siguientes descuentos:</p>
+        <ol>
+            <li>1 pieza sin descuento.</li>
+            <li>2 piezas 10% de descuento.</li>
+            <li>3 piezas 20% de descuento.</li>
+            <li>4 piezas 25% de descuento.</li>
+        </ol>
+        <p>Crear columna calculada con base en el importe de la columna total que otorgue los siguientes descuentos:</p>
+        <ol> 
+            <li>Ventas menores que 100 | Sin descuento.</li>
+            <li>Ventas mayores a 100 y menores a 200 | 10% de descuento.</li>
+            <li>Ventas mayores a 200 | 25% de descuento.</li>
+        </ol>
+        <img src="img/dax10.jpg" alt="" width="460">
+        <p>Cuando los valores no son exactos se utiliza la función switch de otra manera.</p>
+        <img src="img/dax11.jpg" alt="" width="460">
+        <p>Aquí podemos Observar la fórmula por partes.</p>
+        <ul>
+            <li>Precio por cantidad:=SWITCH | Es la sentencia de apertura de la estructura de control SWITCH.</li>
+            <li>Ventas[Total](menor que)100, Ventas[Total], | Si la venta es menor que 100 no aplica descuento.</li>
+            <li>OR Ventas[Total]>100, Ventas[Total]menor que 200, Ventas[Total]*0.90 | Aplica 10% desc.</li>
+            <li>OR Ventas[Total]>200, Ventas[Total]*0.75 | Aplica 25% desc.</li>
+        </ul>
+        
+        <h4>FUNCIONES CONTAINS Y  COUNTROWS</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/6OvXUgeni30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>La función contains sirve para cubrir requerimientos contenidos en un rango específico.</p>
+        <ol>
+            <li>¿Cuántas ventas se obtuvieron del artículo con ID 344?.</li>
+            <li>FILTER | Aplicará un filtro para solamente dejar los ID 344.</li>
+            <li>COUNTROWS | Contará cuantas filas con ID 344 filtradas existen.</li>
+            <img src="img/dax12.jpg" alt="" width="460">
+        </ol>
+        <ol>
+            <li>Confirmar con TRUE Y FALSE si existen ventas del producto 311.</li>
+            <li>CONTAINS | Verifica si el argumento esta dentro de un rango específico.</li>
+            <img src="img/dax13.jpg" alt="" width="460">
+        </ol>
+        <ol>
+            <li>De ese producto 311.</li>
+            <li>Confirmar ventas realizadas al cliente 1007.</li>
+            <img src="img/dax14.jpg" alt="" width="460">
+        </ol>
+        <h4>Función FIND</h4>
+        
+        <ol>
+            <li>El argumento BLANK() sirve para que la función Find no marque error al no encontrar nada.</li>
+            <li>La función FIND es camel case, sensible a may/min.</li>
+            <li>El argumento dentro de FIND no puede hacer uso de caracteres comdín, ejemplo *ba.</li>
+            <li>*ba en otras condiciones localizaría todas las palabras que contengan las letras ba.</li>
+            <img src="img/dax15.jpg" alt="" width="460">
+        </ol>
+        
+        <h4>Función SEARCH</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/incU4LDCoIE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <ol>
+            <li>La función SEARCH no es camel case.</li>
+            <li>El argumento dentro de SEARCH puede hacer uso de caracteres comodín.</li>
+            <img src="img/dax16.jpg" alt="" width="460">
+        </ol>
+        
+        <h4>FUNCIÓN TOPN</h4>
+        <iframe width="360" height="202.5" src="https://www.youtube.com/embed/mYFabdopwGI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>Sirve para obtener los valores de los primeros lugares de una cantidad N, dentro de un rango de datos.</p>
+        <p>SUMX sirve para calcular la suma de valores. En el siguiente ejemplo se sumaran los valores de las primeras 5 posiciones.</p>
+        <ol>
+            <li>TOPN | Num de top | Tabla | Columna | Órden | Columna dentro de la función SUMX</li>
+            <img src="img/dax17.jpg" alt="" width="460">
+            <li>Si los valores se repiten pero se encuentran en las posiciones iniciales se sumaran</li>
+            <img src="img/dax18.jpg" alt="" width="80">
+        </ol>
+        <p>En este segundo ejemplo se sumaran las primeras 10 posiciones de un rango de datos con funciones combinadas SUMX y TOPN para sumar valores y posiciones respectivamente.</p>
+        <ol>
+            <li>Si la función fuera estricta solamente tomaría los valores de las primeras 10 posiciones</li>
+            <img src="img/dax19.jpg" alt="" width="460">
+            <li>Al sumar, se incluyen los valores repetidos del último registro. Por lo que suma 11 posiciones en lugar de 10.</li>
+            <img src="img/dax20.jpg" alt="" width="80">
+        </ol>
+    </section>
+</body>
+
+</html>
